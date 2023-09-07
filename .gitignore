@@ -1,0 +1,13 @@
+*.csv
+*.jpg
+*.pdf
+*.png
+*.eps
+*.ai
+*.xlsx
+*.ttf
+*.spa
+*.otf
+**/
+**/checkpoint
+*.srs
