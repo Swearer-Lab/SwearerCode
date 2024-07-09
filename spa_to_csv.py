@@ -6,10 +6,17 @@ Loads from a folder with a split Omnic IR series and compiles it into a
 .csv file with the wavenumber on the rows and the time in seconds on the columns
 Created on Mon Jul  8 13:59:34 2024
 
+Instructions: 
+1. Ensure you're python has been set up according to the sprectrochempy instructions. (Virtual environment is fine)
+2. Place py file inside a folder with ONLY the split spa files from the series you want to convert. These should be named like "experiment name" + 0000, 0001, 0002, ...
+3. Open your preferred terminal.
+4. Navigate to the folder. (usually 'cd (folder you made)')
+5. Run 'python spa_to_csv.py'
+6. Your folder now contains a csv with all the series data.
 @author: JAmie North
 """
 
-import numpy as np
+'''import numpy as np'''
 import pandas as pd
 import spectrochempy as scp
 import os  
@@ -43,7 +50,7 @@ while os.path.exists(name + i_str +'.spa'):
 spec_2D.name = name
 
 csv = spec_2D.data
-df_csv = pd.DataFrame(csv)
+df_csv = pd.DataFrame(np.transpose(csv), index = spec_2D.x.data, columns = spec_2D.y.data)
 df_csv.to_csv(name + ".csv")
 
     
