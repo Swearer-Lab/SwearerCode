@@ -20,12 +20,12 @@ Instructions:
 import pandas as pd
 import spectrochempy as scp
 import os  
-    
+import numpy as np
    
     
 
 "edit the name of your file here!"
-name = 'FTIR_231027_PtAl2O310_95KBr_1%CO_500s_550_150m_49mW_2' # Base name for your series, before the number of the split file
+name = 'FTIR_240713_PtAL2O3_overKBr_CO_100ppm_steadystate300C440nm50bw90mW0000' # Base name for your series, before the number of the split file
 i = 0 
 i_str = f'{str(i):0>4}'
 
