@@ -1,0 +1,44 @@
+LimCentFW
+[[Model]]
+    ((((Model(linear, prefix='bkg_') + Model(pvoigt, prefix='lz1_')) + Model(pvoigt, prefix='lz2_')) + Model(pvoigt, prefix='lz3_')) + Model(pvoigt, prefix='lz4_'))
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 974
+    # data points      = 456
+    # variables        = 14
+    chi-square         = 1.1871e-05
+    reduced chi-square = 2.6857e-08
+    Akaike info crit   = -7935.55258
+    Bayesian info crit = -7877.83769
+    R-squared          = 0.99980492
+##  Warning: uncertainties could not be estimated:
+    lz1_center:     at boundary
+    lz4_center:     at boundary
+[[Variables]]
+    bkg_slope:     -1.5396e-06 (init = 1)
+    bkg_intercept:  0.00254878 (init = 0)
+    lz1_amplitude:  0.18694043 (init = 0.1)
+    lz1_center:     2094.00000 (init = 2095)
+    lz1_sigma:      6.95506134 (init = 9.1)
+    lz1_fraction:   0 (fixed)
+    lz1_fwhm:       13.9101227 == '2.0000000*lz1_sigma'
+    lz1_height:     0.01262525 == '(((1-lz1_fraction)*lz1_amplitude)/max(1e-15, (lz1_sigma*sqrt(pi/log(2))))+(lz1_fraction*lz1_amplitude)/max(1e-15, (pi*lz1_sigma)))'
+    lz2_amplitude:  0.26116765 (init = 0.1)
+    lz2_center:     2112.30964 (init = 2112.7)
+    lz2_sigma:      6.97163157 (init = 7.7)
+    lz2_fraction:   0 (fixed)
+    lz2_fwhm:       13.9432631 == '2.0000000*lz2_sigma'
+    lz2_height:     0.01759636 == '(((1-lz2_fraction)*lz2_amplitude)/max(1e-15, (lz2_sigma*sqrt(pi/log(2))))+(lz2_fraction*lz2_amplitude)/max(1e-15, (pi*lz2_sigma)))'
+    lz3_amplitude:  0.15896536 (init = 0.1)
+    lz3_center:     2125.30411 (init = 2126)
+    lz3_sigma:      8.51889064 (init = 10)
+    lz3_fraction:   0 (fixed)
+    lz3_fwhm:       17.0377813 == '2.0000000*lz3_sigma'
+    lz3_height:     0.00876511 == '(((1-lz3_fraction)*lz3_amplitude)/max(1e-15, (lz3_sigma*sqrt(pi/log(2))))+(lz3_fraction*lz3_amplitude)/max(1e-15, (pi*lz3_sigma)))'
+    lz4_amplitude:  0.62252491 (init = 0.1)
+    lz4_center:     2102.10000 (init = 2103.1)
+    lz4_sigma:      17.6747182 (init = 16)
+    lz4_fraction:   0 (fixed)
+    lz4_fwhm:       35.3494364 == '2.0000000*lz4_sigma'
+    lz4_height:     0.01654406 == '(((1-lz4_fraction)*lz4_amplitude)/max(1e-15, (lz4_sigma*sqrt(pi/log(2))))+(lz4_fraction*lz4_amplitude)/max(1e-15, (pi*lz4_sigma)))'
+
