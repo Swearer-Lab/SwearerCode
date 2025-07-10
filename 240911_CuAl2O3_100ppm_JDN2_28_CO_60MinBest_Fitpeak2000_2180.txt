@@ -1,0 +1,42 @@
+preexp100
+[[Model]]
+    ((((Model(parabolic, prefix='bkg_') + Model(pvoigt, prefix='lz1_')) + Model(pvoigt, prefix='lz2_')) + Model(pvoigt, prefix='lz3_')) + Model(pvoigt, prefix='lz4_'))
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 4131
+    # data points      = 746
+    # variables        = 11
+    chi-square         = 1.7706e-05
+    reduced chi-square = 2.4090e-08
+    Akaike info crit   = -13075.0103
+    Bayesian info crit = -13024.2483
+    R-squared          = 0.99978900
+[[Variables]]
+    bkg_a:         -7.6755e-08 +/- 3.7880e-09 (4.94%) (init = -5.5513e-07)
+    bkg_b:          3.2113e-04 +/- 1.5853e-05 (4.94%) (init = 0.000108225)
+    bkg_c:         -0.33652278 +/- 0.01657082 (4.92%) (init = -0.04)
+    lz1_amplitude:  0.27705831 +/- 0.00201777 (0.73%) (init = 0)
+    lz1_center:     2094.46130 +/- 0.02845342 (0.00%) (init = 2094.97)
+    lz1_sigma:      7.85 (fixed)
+    lz1_fraction:   0 (fixed)
+    lz1_fwhm:       15.7000000 +/- 0.00000000 (0.00%) == '2.0000000*lz1_sigma'
+    lz1_height:     0.01657827 +/- 1.2074e-04 (0.73%) == '(((1-lz1_fraction)*lz1_amplitude)/max(1e-15, (lz1_sigma*sqrt(pi/log(2))))+(lz1_fraction*lz1_amplitude)/max(1e-15, (pi*lz1_sigma)))'
+    lz2_amplitude:  0.34975229 +/- 0.00257872 (0.74%) (init = 0)
+    lz2_center:     2112.12748 +/- 0.02788492 (0.00%) (init = 2113.3)
+    lz2_sigma:      7.45 (fixed)
+    lz2_fraction:   0 (fixed)
+    lz2_fwhm:       14.9000000 +/- 0.00000000 (0.00%) == '2.0000000*lz2_sigma'
+    lz2_height:     0.02205170 +/- 1.6259e-04 (0.74%) == '(((1-lz2_fraction)*lz2_amplitude)/max(1e-15, (lz2_sigma*sqrt(pi/log(2))))+(lz2_fraction*lz2_amplitude)/max(1e-15, (pi*lz2_sigma)))'
+    lz3_amplitude:  0.18324025 +/- 0.00211604 (1.15%) (init = 0)
+    lz3_center:     2125.40854 +/- 0.05030183 (0.00%) (init = 2127.5)
+    lz3_sigma:      8.75 (fixed)
+    lz3_fraction:   0 (fixed)
+    lz3_fwhm:       17.5000000 +/- 0.00000000 (0.00%) == '2.0000000*lz3_sigma'
+    lz3_height:     0.00983673 +/- 1.1359e-04 (1.15%) == '(((1-lz3_fraction)*lz3_amplitude)/max(1e-15, (lz3_sigma*sqrt(pi/log(2))))+(lz3_fraction*lz3_amplitude)/max(1e-15, (pi*lz3_sigma)))'
+    lz4_amplitude:  0.41198685 +/- 0.00804303 (1.95%) (init = 0)
+    lz4_center:     2100.00000 +/- 0.18023689 (0.01%) (init = 2105)
+    lz4_sigma:      18.2 (fixed)
+    lz4_fraction:   0 (fixed)
+    lz4_fwhm:       36.4000000 +/- 0.00000000 (0.00%) == '2.0000000*lz4_sigma'
+    lz4_height:     0.01063285 +/- 2.0758e-04 (1.95%) == '(((1-lz4_fraction)*lz4_amplitude)/max(1e-15, (lz4_sigma*sqrt(pi/log(2))))+(lz4_fraction*lz4_amplitude)/max(1e-15, (pi*lz4_sigma)))'
+
